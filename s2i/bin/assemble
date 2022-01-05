@@ -25,5 +25,6 @@ mv /tmp/src ${HOME}/src
 echo "---> Building application from source..."
 
 pushd ${HOME}/src > /dev/null
+export JAVA_CMD=${HOME}/jdk-17/bin/java
 mv "$(${HOME}/lein ring uberjar | sed -n 's/^Created \(.*standalone\.jar\)/\1/p')" ${HOME}/app-standalone.jar
 popd > /dev/null
