@@ -7,4 +7,5 @@
 #	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
 #
 
-exec ${HOME}/jdk-17/bin/java -jar ${HOME}/app-standalone.jar
+exec java -jar ${HOME}/app-standalone.jar
+#exec ${HOME}/jdk-17/bin/java -jar ${HOME}/app-standalone.jar

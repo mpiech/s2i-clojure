@@ -9,13 +9,14 @@ LABEL io.k8s.description="Platform for building Clojure apps" \
       io.openshift.expose-services="8080:http" \
       io.openshift.tags="builder,clojure"
 
-#RUN yum -y install java-17-openjdk-devel && yum clean all
-RUN wget https://download.java.net/java/GA/jdk17/0d483333a00540d886896bac774ff48b/35/GPL/openjdk-17_linux-x64_bin.tar.gz -P ${HOME}
-RUN tar xvf ${HOME}/openjdk-17_linux-x64_bin.tar.gz -C ${HOME}
+RUN yum -y install java-11-openjdk-devel && yum clean all
+#RUN wget https://download.java.net/java/GA/jdk17/0d483333a00540d886896bac774ff48b/35/GPL/openjdk-17_linux-x64_bin.tar.gz -P ${HOME}
+#RUN tar xvf ${HOME}/openjdk-17_linux-x64_bin.tar.gz -C ${HOME}
 
 RUN curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o ${HOME}/lein
 RUN chmod 775 ${HOME}/lein
-RUN export JAVA_CMD=${HOME}/jdk-17/bin/java; ${HOME}/lein
+RUN ${HOME}/lein
+#RUN export JAVA_CMD=${HOME}/jdk-17/bin/java; ${HOME}/lein
 
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
