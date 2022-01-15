@@ -1,5 +1,4 @@
-
-IMAGE_NAME = s2i-clojure
+IMAGE_NAME = mpiech/s2i-clojure
 
 .PHONY: build
 build:
