@@ -1,8 +1,8 @@
 
 # Creating a basic S2I builder image  
 See:
-https://cloud.redhat.com/blog/using-clojure-on-openshift
-https://cloud.redhat.com/blog/clojure-s2i-builder-openshift
+  https://cloud.redhat.com/blog/using-clojure-on-openshift
+  https://cloud.redhat.com/blog/clojure-s2i-builder-openshift
 
 ## Getting started  
 
